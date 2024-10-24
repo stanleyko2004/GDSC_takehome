@@ -76,7 +76,8 @@ h3 {
 /* top frame styles */
 .top-frame-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .top-frame-left {
@@ -90,8 +91,16 @@ h3 {
   margin-bottom: 60px;
 }
 
-.top-frame-right {
+.top-frame-img-container {
   flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.top-frame-right {
+  max-width: 580px;
+  margin-left: 2px;
+  height: auto;
 }
 
 .top-frame-leadin {
@@ -115,16 +124,23 @@ h3 {
 /* middle frame styles */
 .middle-frame-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .middle-frame-left {
   flex: 1;
 }
 
-.middle-frame-right {
+.middle-frame-image-container {
   flex: 1;
-  margin-left: 44px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.middle-frame-right {
+  max-width: 540px;
+  height: auto;
 }
 
 .middle-frame-title {
@@ -181,7 +197,7 @@ h3 {
 .bottom-frame-container {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: center;
 }
 
 .bottom-frame-pictures {
@@ -193,18 +209,30 @@ h3 {
 }
 
 .bottom-frame-pictures img {
-  height: 100%;
-  width: auto;
+  max-width: 630px;
+  height: auto;
 }
 
 .bottom-frame-text {
   display: flex;
   flex: 1;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: auto;
 }
 
-/* pushing button to bottom */
-.bottom-frame-text>div:last-child {
+.bottom-frame-text-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.bottom-frame-buttons {
+  display: flex;
+  justify-content: flex-start;
   margin-top: auto;
 }
 
@@ -217,6 +245,7 @@ h3 {
   margin-right: -140px;
   padding-left: 140px;
   padding-right: 140px;
+  align-items: center;
 }
 
 .footer-gdsc {
@@ -329,4 +358,31 @@ a:active {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 16px;
   font-weight: 700;
+}
+
+@media (max-width: 1300px) {
+  .top-frame-container {
+    flex-direction: column;
+  }
+
+  .middle-frame-container {
+    flex-direction: column;
+  }
+
+  .bottom-frame-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 850px) {
+  .navbar-left {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer-socials {
+    display: flex;
+    flex-direction: column;
+  }
 }

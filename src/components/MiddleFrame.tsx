@@ -22,7 +22,9 @@ const MiddleFrame: React.FC = () => {
         </div>
         <button className='button button-secondary button-text'>View our projects</button>
       </div>
-      <img className='middle-frame-right' src={middle_frame_picture} alt='middle_frame_img' />
+      <div className='middle-frame-image-container'>
+        <img className='middle-frame-right' src={middle_frame_picture} alt='middle_frame_img' />
+      </div>
     </div>
   )
 }

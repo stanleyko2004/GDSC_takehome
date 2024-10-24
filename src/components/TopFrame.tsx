@@ -22,7 +22,9 @@ const TopFrame: React.FC = () => {
           <button className='button button-secondary button-text' style={{ marginLeft: '40px' }}>Contact us</button>
         </div>
       </div>
-      <img className='top-frame-right' src={top_frame_picture} alt='top_frame_img' />
+      <div className="top-frame-img-container">
+        <img className='top-frame-right' src={top_frame_picture} alt='top_frame_img' />
+      </div>
     </div>
   )
 }
